@@ -57,6 +57,7 @@ exports.sendEmail = async (req,res) => {
                     + ">aquí</a> para restablecer tu contraseña ahora.</h3>"
                 emailSubject = 'Recupera tu contraseña en Free-Lánzate';
             } else {
+
                 emailBody = "<h2>Cordial Saludo, " + fullName + ".</h2>" +
                     "<p>De acuerdo con tu actividad reciente, has indicado que deseas" +
                     " cambiar la contraseña de tu cuenta en Free-Lánzate.</p>"
