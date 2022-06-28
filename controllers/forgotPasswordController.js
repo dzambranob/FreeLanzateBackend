@@ -49,8 +49,7 @@ exports.sendEmail = async (req,res) => {
             let emailSubject;
 
             if (req.params.change === 'true') {
-                emailBody = "<img width=\"200\" src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6jqZiTxBdUGdKaP7dax9X-GlpA-9EQ_BgU6W_WJQV4Z7MC-A3F-XYqrx3cxlckGcNrQi32vPMIcIDQ36J3ub-zPEsb9UzAJgk8rJqML3MiGB4BASS__nK_c6KRTw1TNEYcq7oj6OcAkXEoyZx6wA92qgiiuGDrM7pSv_t-aFXun2CKOGA3s4lsLKfnw/s3064/Logo.png\" alt=\"Free-Lánzate\"/>" +
-                    "<h2>Cordial Saludo, " + fullName + ".</h2>" +
+                emailBody = "<h2>Cordial Saludo, " + fullName + ".</h2>" +
                     "<p>De acuerdo con tu actividad reciente, has indicado que olvidaste" +
                     " la contraseña de tu cuenta en Free-Lánzate.</p>"
                     + "<h3>Haz clic <a href="
@@ -58,8 +57,7 @@ exports.sendEmail = async (req,res) => {
                     + ">aquí</a> para restablecer tu contraseña ahora.</h3>"
                 emailSubject = 'Recupera tu contraseña en Free-Lánzate';
             } else {
-                emailBody = "<img width=\"200\" src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6jqZiTxBdUGdKaP7dax9X-GlpA-9EQ_BgU6W_WJQV4Z7MC-A3F-XYqrx3cxlckGcNrQi32vPMIcIDQ36J3ub-zPEsb9UzAJgk8rJqML3MiGB4BASS__nK_c6KRTw1TNEYcq7oj6OcAkXEoyZx6wA92qgiiuGDrM7pSv_t-aFXun2CKOGA3s4lsLKfnw/s3064/Logo.png\" alt=\"Free-Lánzate\"/>" +
-                    "<h2>Cordial Saludo, " + fullName + ".</h2>" +
+                emailBody = "<h2>Cordial Saludo, " + fullName + ".</h2>" +
                     "<p>De acuerdo con tu actividad reciente, has indicado que deseas" +
                     " cambiar la contraseña de tu cuenta en Free-Lánzate.</p>"
                     + "<h3>Haz clic <a href="
