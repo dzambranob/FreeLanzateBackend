@@ -63,6 +63,7 @@ exports.create = (req, res) => {
         thumbnailUrl: req.body.thumbnailUrl,
         adPriority: req.body.adPriority,
     };
+    console.log(post)
     Post.create(post)
         .then(data => {
             res.send(data);
