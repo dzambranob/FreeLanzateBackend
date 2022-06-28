@@ -4,7 +4,7 @@ const expect = require('chai').expect;
 const User = require('../../models/user')
 chai.use(chaiHttp);
 
-const url = 'http://localhost:8000';
+const url = 'https://free-lanzate-back.herokuapp.com';
 
 describe('Should register a normal User: ', () => {
     it('should insert an user into the database', (done) => {

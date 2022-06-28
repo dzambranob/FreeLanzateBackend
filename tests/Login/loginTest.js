@@ -4,7 +4,7 @@ const expect = require('chai').expect;
 
 chai.use(chaiHttp);
 
-const url = 'http://localhost:8000';
+const url = 'https://free-lanzate-back.herokuapp.com';
 
 describe('Should get login token: ', () => {
     it('shouldnt insert a post', (done) => {
