@@ -28,12 +28,12 @@
     "sequelize": "^6.19.0",
     "sequelize-lazy-migrations": "^1.0.4",
     "shelljs": "^0.8.5",
-    "uuidv4": "^6.2.13"
-  },
-  "devDependencies": {
+    "uuidv4": "^6.2.13",
     "cross-env": "^7.0.3",
     "express-session": "^1.17.3",
-    "jsdoc": "^3.6.10",
+    "jsdoc": "^3.6.10"
+  },
+  "devDependencies": {
     "nodemon": "^2.0.16",
     "sequelize-cli": "^6.4.1"
   }
