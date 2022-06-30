@@ -26,7 +26,7 @@ exports.findAllPosts = (req, res) =>{
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while retrieving users."
+                    err.message || "Hubo un error al traer los anuncios."
             });
         });
 };
@@ -41,7 +41,7 @@ exports.findAll = (req, res) =>{
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while retrieving posts."
+                    err.message || "Hubo un error al traer los anuncios."
             });
         });
 };
@@ -49,7 +49,7 @@ exports.findAll = (req, res) =>{
 exports.create = async (req, res) => {
     if (!req.body.postTitle) {
         res.status(400).send({
-            message: "Content can not be empty!"
+            message: "Debes diligenciar todos los campos requeridos."
         });
         return;
     }
@@ -74,7 +74,7 @@ exports.create = async (req, res) => {
         .catch(err => {
             res.status(500).send({
                 message:
-                    err.message || "Some error occurred while creating the Post."
+                    "Hubo un error al crear la publicación. Por favor, intente de nuevo."
             });
         });
 };
@@ -84,7 +84,7 @@ exports.uploadImage = (req, res) => {
 
     if(!req.file){
         res.status(500).send({
-            message: "Some error ocurred uploading the image"
+            message: "Hubo un error al cargar la imagen."
         })
     } else {
         res.send(req.file) //file.filename almacena el nombre del file en el servidor
