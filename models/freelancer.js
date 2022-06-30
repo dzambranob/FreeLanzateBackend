@@ -22,6 +22,10 @@ module.exports = (sequelize, DataTypes) => {
       const [results, metadata] = await sequelize.query("select * from freelancers join posts p on freelancers.id = p.FreelancerId where freelancers.id = ?" ,{replacements:[idFreelancer]});
       return results;
     }
+    static async getIdByUserId(userId) {
+      const [results, metadata] = await sequelize.query("select freelancers.id from freelancers join users u on freelancers.UserId = u.id where u.id = ?" ,{replacements:[userId]});
+      return results;
+    }
 
     static associate(models) {
       Freelancer.hasMany(models.Post, {

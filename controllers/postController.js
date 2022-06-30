@@ -1,5 +1,6 @@
 const db = require("../models");
 const Post = db.Post;
+const Freelancer = db.Freelancer;
 const Op = db.Sequelize.Op;
 
 const path = require('path')
@@ -45,7 +46,7 @@ exports.findAll = (req, res) =>{
         });
 };
 
-exports.create = (req, res) => {
+exports.create = async (req, res) => {
     if (!req.body.postTitle) {
         res.status(400).send({
             message: "Content can not be empty!"
@@ -53,10 +54,12 @@ exports.create = (req, res) => {
         return;
     }
     //imageUrl = path.join('/images/',req.file.filename)
-
+    let idFreelancer = await Freelancer.getIdByUserId(req.body.userId);
+    idFreelancer = Object.values(idFreelancer[0])[0];
+    console.log(idFreelancer)
     const post = {
         postTitle: req.body.postTitle,
-        FreelancerId: req.body.freelancerId,
+        FreelancerId: idFreelancer,
         postDescription: req.body.postDescription,
         postPrice: req.body.postPrice,
         PostCategoryId: req.body.postCategory,
