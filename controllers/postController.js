@@ -54,7 +54,7 @@ exports.create = async (req, res) => {
         return;
     }
     //imageUrl = path.join('/images/',req.file.filename)
-    let idFreelancer = await Freelancer.getIdByUserId(req.body.userId);
+    let idFreelancer = await Freelancer.getIdByUserId(req.body.freelancerId);
     idFreelancer = Object.values(idFreelancer[0])[0];
     console.log(idFreelancer)
     const post = {
